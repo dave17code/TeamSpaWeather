@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
         $0.spacing = 4
     }
     let humidityImageView = UIImageView().then {
-        $0.image = UIImage(named: "humidity")
+        $0.image = UIImage(named: "Humidity")
     }
     let humidityLabel = UILabel().then {
         $0.font = UIFont(name: "Roboto-Regular", size: 14)
@@ -324,7 +324,6 @@ class MainViewController: UIViewController {
     }
     
     func updateForecastData(latitude: Double, longitude: Double) {
-
         WeatherManager.shared.getForecastWeather(latitude: latitude, longitude: longitude) { [weak self] result in
             switch result {
             case .success(let data):
